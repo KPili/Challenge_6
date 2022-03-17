@@ -9,7 +9,7 @@ ActiveAdmin.register Customer do
     f.actions         # adds the 'Submit' and 'Cancel' buttons
     # input for the file attachment piece
     f.inputs do
-      f.input :image, as: :file, hint: f.object.image.present? ? image_tag(f.object.image) : "" # Hint allows us to preview uploaded images in active admin
+      f.input :image, as: :file, hint: f.object.image.present? ? image_tag(f.object.image, width: "300") : "" # Hint allows us to preview uploaded images in active admin
     end
   end
 end
