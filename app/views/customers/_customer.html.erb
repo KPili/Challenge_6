@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="col-sm">
+    <div class="row">
+      <div class="card">
+        <%# If an image is associated with the customer, add them %>
+        <% if customer.image.present?%>
+          <%= image_tag customer.image, class:"card-img-top mt-3", alt:"Customer Photo"%>
+        <%end%>
+        <%# Card contents %>
+        <div class="card-body">
+          <h3 class="card-title"><%= customer.full_name%></h5>
+          <h6 class="card-subtitle mb-2 text-muted">Phone Number: <%=customer.phone_number%></h6>
+          <h6 class="card-subtitle mb-2 text-muted">Email Address: <%=customer.email_address%></h6>
+          <p class="card-text">
+          <%= customer.notes%>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
